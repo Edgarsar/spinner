@@ -1,12 +1,16 @@
-process.stdout.write('hello from spinner1.js... \rheyyy\n');
+// process.stdout.write('hello from spinner1.js... \rheyyy\n');
 
-
+let delay = 100
+let char = "| / - \\"
+char += "\n"
+for( let i = 0;i<char.length;i++){
 setTimeout(() => {
-  process.stdout.write("\r|   ");
+  process.stdout.write(`\r${char[i]}   `);
 
-}, 100);
+}, delay+=200);
+}
 
-setTimeout(() => {
+/* setTimeout(() => {
   process.stdout.write("\r/   ");
 }, 300);
 
@@ -24,22 +28,22 @@ setTimeout(() => {
 
 setTimeout(() => {
   process.stdout.write("\r|   ");
-}, 900);
+}, 1000);
 
 
 
 setTimeout(() => {
   process.stdout.write('\r/   ');
-}, 1100);
+}, 1200);
 
 setTimeout(() => {
   process.stdout.write('\r-   ');
-}, 1300);
+}, 1400);
 
 setTimeout(() => {
   process.stdout.write('\r\\   ');
-}, 1500);
+}, 1600);
 
 setTimeout(() => {
-  process.stdout.write('\r|   \n');
-}, 1700);
+  process.stdout.write('\r|   ');
+}, 1900); */
